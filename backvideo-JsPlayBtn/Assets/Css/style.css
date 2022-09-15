@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero .bars{
+    position: absolute;
+    top:.5rem;
+    left:.5rem;
+    cursor: pointer;
+    background-color:rgba(255,255,225,0.5);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color:rgba(78,0,225,0.75);
+    border-radius:3px;
+    transition: .5s ease;
+}
+.hero .bars:hover{
+    transform: scale(1.04);
+}
+.hero .sidebar{
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(78,0,225,0.75),rgba(7,0,60,0.85));
+    padding: 20px 60px;
+    color: white;
+}
+.topLinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topLinks i{
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.topLinks .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap:2rem;
+}
+.topLinks i:hover{
+    transform: scale(1.1);
+}
+h1{
+    font-family:'Kaushan Script', cursive;
+    margin-top: 130px;
+    font-size: 60px;
+}
+p{
+    font-family: 'Red Hat Display';
+    margin-top: 40px;
+}
+.sidebar h3{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.sidebar a{
+    display: inline-block;
+    text-decoration: none;
+    background-color:white;
+    color: #4e00ff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 15px 40px;
+    margin-top: 25px;
+    border-radius:4px;
+}
+.sidebar a:hover{
+    background-color: aliceblue;
+}
+.hero #vid-btn{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    font-size:8rem;
+    width: 100px;
+    font-weight: lighter;
+    color: white;
+    cursor: pointer;
+}
+#bgVid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.bars{
+    display: none;
+}
+.arrow{
+    opacity: 0;
+}
+.hero .sidebar.active{
+    right: 0;
+    transition: .5s ease;
+}
+
+@media screen and (max-width:800px) {
+    .hero{
+        overflow: hidden;
+    }
+    h1 {
+        font-size:30px;
+    }
+    .hero .sidebar{
+        padding:20px 30px;
+        width:57%;
+        z-index: 1;
+        right:-100%;
+        transition: .5s ease;
+    }
+    .bars{
+        display: block;
+    }
+    .arrow{
+        opacity: 1;
+    }
+    .hero #vid-btn {
+        position: absolute;
+        top: 50%;
+        left:43%;
+    }
+    
+}
+@media screen and (max-width:430px) {
+    h1 {
+        font-size:30px;
+    }
+    .hero{
+        background-position: top 25% left 25%;
+        overflow: hidden;
+    }
+    .hero .sidebar{
+        padding:20px 30px;
+        width: 100%;
+        z-index: 1;
+        transition: .5s ease;
+        /* display: none; */
+    }
+    
+}
+@media(min-aspect-ratio: 16/9){
+    #bigVid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    #bigVid{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
